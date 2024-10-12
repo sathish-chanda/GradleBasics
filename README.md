@@ -29,3 +29,46 @@
 - Gradle wrapper contains gradle binary version which needs to be used in the project. 
 - When we run any task first it will get/download the gradle version specified in the gradle-wrapper.properties file. Then the task will be executed by it.
 - This will be checked into the version control. so, that other developers will also have a consistent behavior of the project. Otherwise some functionality which is used in the project from the gradle might be deprecated in the new version, this make the project builds to fails.
+
+### Plugins
+- Reusable common functionality
+- Plugins can be applied to gradle configurations
+- Extend gradle capabilities
+  - Add new configuration model : plugins { id('com.gradle.upload') }
+  - Initialize configuration : testResultsConfig { server = 'https://...' }
+  - Add new tasks : gradle testResultsConfig
+- Types
+  - core : java,java-library,application
+    - Shipped with gradle distribution
+  - community
+    - Downloaded from plugin repository
+    - Developed by developers in the community
+    - Have to specify the version
+  - Local
+    - Common functionality specific to the project developed by you.
+    - Implemented locally.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
