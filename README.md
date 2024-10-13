@@ -48,6 +48,25 @@
     - Common functionality specific to the project developed by you.
     - Implemented locally.
 
+### Tasks
+- INPUTS -> ACTION -> OUTPUTS
+- Basis unit of work in Gradle
+  - Compile
+  - Test
+  - Generate Docs
+- Tasks belong to projects
+  - Different projects or subproject can have different tasks because subprojects can have different plugins.
+- Ways to run
+  - Using terminals - gradle taskName
+  - Using Gradle Tab on the right of the IDE - choose the task and click run!
+  
+### plugins 
+- Plugins will give add more functionality by adding new tasks. // id("org.gradle.hello-world")
+- Do a good research about the plugin before using it. Only safe plugins should be added.
+- After adding the plugin
+- Check for the newly added tasks. // app:helloWorld
+
+
 
 
 

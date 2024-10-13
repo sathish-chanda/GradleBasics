@@ -9,6 +9,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("org.gradle.hello-world") version "0.2" // Adding tasks from community plugins.
 }
 
 repositories {
@@ -32,4 +33,8 @@ application {
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks.named<JavaCompile>("compileJava") {
+    options.isDebug = false
 }
