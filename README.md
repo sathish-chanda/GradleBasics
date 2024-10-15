@@ -66,8 +66,22 @@
 - After adding the plugin
 - Check for the newly added tasks. // app:helloWorld
 
+### Dependency Management
+- libraries needed by a gradle project.
+- Types
+  - Modules :can change overtime. :can have many versions.
+  - Other gradle projects
+  - Local files
+- Dependencies will be downloaded from the trusted repositories
+- Command *gradle app:dependencies* will display not only dependencies from build.gradle, but it also displays the transitive dependencies as well. which we can check the pom.xml file in dependency plugin on the site.
+- Bucket Dependency :Direct dependencies you define.
+- Resolved Dependency :Also include transitive dependencies.
 
-
+### Most common dependency configuration
+- testImplementation :Required to compile and run tests, eg. junit
+- runtimeOnly :Required when running application, eg. specific logging library.
+- implementation :internally used
+- api :public facing specification
 
 
 
